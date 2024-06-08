@@ -37,13 +37,13 @@ pipeline {
         }
         stage('print params'){
             steps{
-                echo "Hello ${params.PERSON}"
-                echo "Biography: ${params.BIOGRAPHY}"
-                echo "Toggle: ${params.TOGGLE}"
-                echo "Choice: ${params.CHOICE}"
-                echo "Password: ${params.PASSWORD}"
-                echo 'triggered test again'
-                error 'some failure'
+               sh "echo Hello ${params.PERSON}"
+               sh "echo Biography: ${params.BIOGRAPHY}"
+               sh "echo Toggle: ${params.TOGGLE}"
+               sh "echo Choice: ${params.CHOICE}"
+               sh "echo Password: ${params.PASSWORD}"
+               sh "echo triggered test again"
+               sh "error some failure"
         }
     }}
     post { 
